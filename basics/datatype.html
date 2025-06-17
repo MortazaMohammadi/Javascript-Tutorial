@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+</head>
+
+<body>
+    <h2>JavaScript Data Types</h2>
+    <p>
+        JavaScript supports different types of data. The main data types are:
+    </p>
+    <ul>
+        <li><b>Number</b> - for numeric values</li>
+        <li><b>String</b> - for text</li>
+        <li><b>Boolean</b> - true or false</li>
+        <li><b>Undefined</b> - a variable without a value</li>
+        <li><b>Null</b> - an empty or unknown value</li>
+        <li><b>Object</b> - for collections of data</li>
+        <li><b>Symbol</b> - for unique identifiers (ES6). Symbols are always unique, even if they have the same
+            description. They are often used as object property keys to avoid property name collisions.</li>
+        <li><b>BigInt</b> - for large integers (ES2020)</li>
+    </ul>
+    <h3>Primitive vs Non-Primitive Types</h3>
+    <ul>
+        <li><b>Primitive Types</b>: Number, String, Boolean, Undefined, Null, Symbol, BigInt</li>
+        <li><b>Non-Primitive (Reference) Types</b>: Object (including Array, Function, etc.)</li>
+    </ul>
+    <p>
+        <b>Primitive types</b> store single values and are immutable. <br>
+        <b>Non-primitive types</b> store collections or more complex entities and are mutable.
+    </p>
+    <pre>
+console.log('primitive datatypes')
+let str = 'hello';
+let age = 30;
+let isonline = true;
+let x;
+let empty = null;
+let big = 1232432534460n
+let id = Symbol('ID')
+
+console.log('str:', str, typeof str);
+str = 3;
+console.log('str (after reassignment):', str, typeof str);
+console.log('age:', age, typeof age);
+console.log('isonline:', isonline, typeof isonline);
+console.log('x (undefined):', x, typeof x);
+console.log('empty (null):', empty, typeof empty);
+console.log('big:', big, typeof big);
+console.log('id:', id, typeof id);
+console.log('\n\n')
+
+
+console.log('None primitive datypes')
+let person={
+    name: 'ali',
+    age: 30
+}
+console.log(person)
+console.log(person.name)
+console.log(person.age)
+
+
+let colors = ['red','green','blue'];
+
+console.log(colors)
+console.log(colors[0])
+console.log(colors[1])
+console.log(colors[2])
+
+
+console.log('deference of permitive and none permitive')
+
+let a = 10;
+let b = a
+b = 20
+console.log(a)
+
+let obj1 = {value: 10}
+let obj2 = obj1
+obj2.value = 20
+console.log(obj1.value)
+
+    </pre>
+    <a href="datatype.js">datatype</a>
+    <script src="datatype.js">
+    </script>
+</body>
+
+</html>
