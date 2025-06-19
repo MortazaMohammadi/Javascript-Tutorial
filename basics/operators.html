@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Operators</title>
+</head>
+<body>
+    <h1>JavaScript Operators</h1>
+    <pre id="output"></pre>
+    <script>
+        let output = '';
+
+        output += 'Arithmetic Operators\n';
+        output +='let a = 10, b = 3;\n';
+        let a = 10, b = 3;
+        output += `a + b = ${a + b}\n`;
+        output += `a - b = ${a - b}\n`;
+        output += `a * b = ${a * b}\n`;
+        output += `a / b = ${a / b}\n`;
+        output += `a % b = ${a % b}\n`;
+        output += `a ** b = ${a ** b}\n\n`;
+
+        output += 'Assignment Operators\n';
+        let x = 5;
+        output += `x = ${x}\n`;
+        x += 2;
+        output += `x += 2 -> ${x}\n`;
+        x *= 3;
+        output += `x *= 3 -> ${x}\n\n`;
+
+        output += 'Comparison Operators\n';
+        output += `5 == '5' : ${5 == '5'}\n`;
+        output += `5 === '5' : ${5 === '5'}\n`;
+        output += `5 != '5' : ${5 != '5'}\n`;
+        output += `5 !== '5' : ${5 !== '5'}\n`;
+        output += `5 > 3 : ${5 > 3}\n`;
+        output += `5 < 3 : ${5 < 3}\n\n`;
+
+        output += 'Logical Operators\n';
+        output += `true && false : ${true && false}\n`;
+        output += `true || false : ${true || false}\n`;
+        output += `!true : ${!true}\n\n`;
+
+        output += 'Other Operators\n';
+        output += `typeof 123 : ${typeof 123}\n`;
+        output += `typeof 'abc' : ${typeof 'abc'}\n`;
+        output += `typeof [] : ${typeof []}\n`;
+        output += `typeof {} : ${typeof {}}\n`;
+
+        document.getElementById('output').textContent = output;
+    </script>
+</body>
+</html>
