@@ -1,0 +1,148 @@
+let age = 66
+
+if (age < 18){
+    console.log('Not eligible to vote')
+} else if(age >= 18 && age <= 65){
+    console.log(" Eligible to vote")
+}else{
+    console.log('eligible for senior voting benefits')
+}
+
+//----------------------------------------------------------------------------
+console.log('\n\n\n')
+//----------------------------------------------------------------------------
+
+
+let score = 90
+
+if (score >= 90 && score <= 100){
+
+    console.log(`Grade A, ${score}`)
+}else if (score >= 80 && score< 90){
+    console.log('Grade B')
+}else{
+    console.log('Un eligible')
+}
+
+//----------------------------------------------------------------------------
+console.log('\n\n\n')
+//----------------------------------------------------------------------------
+
+ali = 'ishere'
+moh = 'nothere'
+
+let result = (ali === 'ishere') ? 'yes here is': 'not here'
+console.log(result)
+
+//----------------------------------------------------------------------------
+console.log('\n\n\n')
+//----------------------------------------------------------------------------
+
+
+console.log('String methods and properties');
+
+let str = 'Hello, World!, Hello Js';
+console.log('lenght', str.lenght)
+console.log('toUpperCase:', str.toUpperCase());
+console.log('to lower case:', str.toLowerCase());
+console.log('inexOf o', str.indexOf('o'))
+console.log('slice ', str.slice(0,5))
+console.log('replace first o: ',str.replace('o', 'u'))
+console.log('replace all o to u:', str.replace(/o/g,'u'))
+fndxo = str.indexOf('o')
+sndxo = str.indexOf('o', fndxo+1)
+console.log(`first index of o : ${fndxo} `)
+console.log(`second index of o : ${sndxo} `)
+console.log('spilte : ', str.split(' '))
+console.log('str by index: ', str[2])
+console.log('is s include str: ', str.includes('o'))
+//----------------------------------------------------------------------------
+console.log('\n\n\n')
+//----------------------------------------------------------------------------
+
+
+// Your task 1:
+
+// Trim extra spaces
+
+// Capitalize the first letter of the message
+
+// Replace "javascript" with "React"
+
+// Count how many times "o" appears
+
+// Output final message and character count
+
+let rawMessage = "  hello, my name is amin. i love javascript and code .  ";
+
+rawMessage = rawMessage.trim()
+console.log('space tab or endline remove by trim :', rawMessage)
+
+
+rawMessage = rawMessage.charAt(0).toUpperCase() + rawMessage.slice(1)
+console.log(`capitalize first letter: ${rawMessage}`)
+
+console.log('replace javascript with react', rawMessage.replace(/javascript/g,'react'))
+console.log('count o in str :', rawMessage.split('o').length-1)
+console.log('count the letters in str: ', rawMessage.length)
+//----------------------------------------------------------------------------
+console.log('\n\n\n')
+//----------------------------------------------------------------------------
+
+// 🎯 Your tasks 2:
+// Trim the sentence.
+
+// Replace all "javascript" with "React" (case-sensitive).
+
+// Capitalize the first letter of the sentence.
+
+// Count how many times the word "fun" appears.
+
+// Replace only the second "fun" with "exciting".
+
+// Final output: cleaned sentence + "fun count".
+
+
+let messySentence = "  javascript is fun, fun, and even more fun! I love javascript.  ";
+console.log('the real: ' ,messySentence)
+
+sen = messySentence.trim()
+
+sen = sen.replace(/javascript/g, 'React');
+sen = sen.charAt(0).toUpperCase() + sen.slice(1)
+countfun = sen.split('fun').length -1
+funindex = sen.indexOf('fun',sen.indexOf('fun')+1)
+sen = sen.slice(0,funindex)+ 'exciting'+ sen.slice(funindex +3)
+console.log('the real: ' ,sen)
+console.log('fun count', countfun)
+
+//----------------------------------------------------------------------------
+console.log('\n\n\n')
+//----------------------------------------------------------------------------
+// 🎯 Your tasks 3: 
+// Trim all emails.
+
+// Split them into an array.
+
+// Validate emails (valid if it contains exactly one @).
+
+// Fix emails that have multiple @ by keeping only the first one.
+// → e.g., "john@@gmail.com" → "john@gmail.com"
+
+// Capitalize the first letter of the username (amin → Amin)
+
+// Output an array of cleaned, valid email addresses.
+
+
+let rawEmails = "  amin@site.com, john@@gmail.com ,   sara@site.com,  user@@@mail.com  ";
+
+let emails  = rawEmails.trim().split(',')
+let cleanemails = []
+for (var email of emails){
+    firstat = email.indexOf('@')
+    let pref = email.slice(0,firstat+1)
+    let suf = email.slice(firstat+1).replace(/@/g,'')
+    email = pref + suf
+    cleanemails.push(email.trim().charAt(0).toUpperCase() + email.trim().slice(1))
+}
+console.log(cleanemails)
