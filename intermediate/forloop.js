@@ -36,3 +36,29 @@ for (var i = 0; i <= mylist.length-1;i++){
     mylist[minidx] = swap
 }
 console.log(`after selection sort: ${mylist}`)
+
+console.log('\n for..of, for..in, foreach')
+for (let i of mylist){
+    console.log(i)
+}
+for (let i in mylist){
+    console.log(mylist[i],`index is = ${i}, the type usin for..in is ${typeof(i)}`)
+}
+
+mylist.forEach(k => {
+    console.log(k,typeof(k))
+});
+mylist.forEach((value, idx, arry) =>{
+console.log(`value: ${value}, index: ${idx}, array: ${arry } ${typeof(value)}, ${typeof(value)}, ${typeof(arry)} `)
+});
+
+
+let myobj = {
+    name:'Mohammad',
+    age:25,
+    position:'Amir'
+}
+
+for (let i in myobj){
+    console.log(`key ,${i}: value ${myobj[i]}`)
+}
