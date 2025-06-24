@@ -97,3 +97,46 @@ function argu(){
     })
 }
 argu(5,10,'ali')
+
+
+console.log('\n function with default parameter')
+function defaultParam(a=5,b=10){
+    console.log(a,b)
+}
+defaultParam()
+defaultParam(1,2)
+defaultParam(1) // only first parameter is defaulted
+defaultParam(undefined,2) // only second parameter is defaulted
+
+let arroargu = (...args) =>{
+    return args
+}
+console.log(arroargu(1), typeof(arroargu(1)))
+arroargu('a',2,true,[1,2],0).forEach(value =>{
+    console.log(value)
+})
+b = function(a){
+    console.log(a)
+}
+b(100)
+new b(22)
+
+console.log('\nExecutes immediately after definition. ');
+(function() {
+  console.log("I run automatically!");
+})();
+
+console.log('\n Generator Functions (function*)');
+function * generatorfunc(){
+    yield 1;
+    yield 2;
+    yield 3;
+}
+const gen = generatorfunc()
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+
+
+
