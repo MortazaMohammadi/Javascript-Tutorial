@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript Object vs Array Explanation</title>
+</head>
+<body>
+
+  <h2>✅ JavaScript <u>Object</u></h2>
+  <p>
+    An <strong>object</strong> is a collection of key-value pairs. It models real-world entities.
+    Keys are usually strings, and values can be anything.
+  </p>
+
+  <h3>🔸 Example:</h3>
+  <pre>
+const person = {
+  name: "Ali",
+  age: 30,
+  greet: function() {
+    console.log("Hello, I am " + this.name);
+  }
+};
+
+// Access:
+person.name         // "Ali"
+person['age']       // 30
+person.greet();     // "Hello, I am Ali"
+  </pre>
+
+  <hr/>
+
+  <h2>✅ JavaScript <u>Array</u></h2>
+  <p>
+    An <strong>array</strong> is an ordered list of values, accessed by numeric indexes starting at 0.
+  </p>
+
+  <h3>🔸 Example:</h3>
+  <pre>
+const fruits = ["Apple", "Banana", "Cherry"];
+
+// Access:
+fruits[0]           // "Apple"
+fruits.length       // 3
+  </pre>
+
+  <hr/>
+
+  <h2>✅ Summary Table</h2>
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Feature</th>
+      <th>Object</th>
+      <th>Array</th>
+    </tr>
+    <tr>
+      <td>Structure</td>
+      <td>Key-Value pairs</td>
+      <td>Ordered list</td>
+    </tr>
+    <tr>
+      <td>Access</td>
+      <td>object.key or object['key']</td>
+      <td>array[index]</td>
+    </tr>
+    <tr>
+      <td>Use Case</td>
+      <td>Represent entities (person, car)</td>
+      <td>Lists (fruits, numbers)</td>
+    </tr>
+  </table>
+
+  <script src="object_array.js"></script>
+
+</body>
+</html>

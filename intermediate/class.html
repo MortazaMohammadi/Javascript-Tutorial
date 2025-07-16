@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <h2>Class</h2>
+    <pre>
+
+-------------------------------
+JavaScript Classes (ES6+)
+-------------------------------
+
+A class is a blueprint for creating objects with shared structure and behavior.
+
+Syntax:
+class MyClass {
+    constructor(param1, param2) {
+        // Initialization code
+        this.prop1 = param1;
+        this.prop2 = param2;
+    }
+
+    method1() {
+        // Instance method
+        return this.prop1;
+    }
+
+    static staticMethod() {
+        // Static method (called on class, not instance)
+        return 'static';
+    }
+}
+
+Usage:
+const obj = new MyClass('A', 'B');
+obj.method1(); // 'A'
+MyClass.staticMethod(); // 'static'
+
+-------------------------------
+Features:
+-------------------------------
+- Not hoisted (must be defined before use)
+- Supports inheritance (extends)
+- Can have constructor, instance methods, static methods, getters/setters
+
+-------------------------------
+Class Fields (Class Variables):
+-------------------------------
+- You can declare class variables (fields) directly inside the class, outside the constructor.
+- These are called "public fields" and are part of the instance.
+
+Example:
+class Counter {
+    count = 0; // class field
+
+    increment() {
+        this.count++;
+    }
+}
+
+const c = new Counter();
+c.count; // 0
+c.increment();
+c.count; // 1
+
+// You can also use # for private fields (only accessible inside the class):
+class Secret {
+    #hidden = 42; // private field
+
+    reveal() {
+        return this.#hidden;
+    }
+}
+
+const s = new Secret();
+s.reveal(); // 42
+// s.#hidden; // Error: private field
+
+-------------------------------
+Inheritance:
+-------------------------------
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        return `${this.name} makes a sound.`;
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        return `${this.name} barks.`;
+    }
+}
+
+const d = new Dog('Rex');
+d.speak(); // 'Rex barks.'
+
+-------------------------------
+Constructor:
+-------------------------------
+- Special method for initializing new objects.
+- Only one constructor per class.
+
+-------------------------------
+Instance Methods vs Static Methods:
+-------------------------------
+- Instance methods: Called on object instances.
+- Static methods: Called on the class itself.
+
+-------------------------------
+Getters and Setters:
+-------------------------------
+class Rectangle {
+    constructor(width, height) {
+        this._width = width;
+        this._height = height;
+    }
+    get area() {
+        return this._width * this._height;
+    }
+    set width(value) {
+        this._width = value;
+    }
+}
+
+const r = new Rectangle(5, 10);
+r.area; // 50
+r.width = 7;
+
+-------------------------------
+Summary:
+-------------------------------
+- Classes provide a clear, concise way to create objects and handle inheritance.
+- Use classes for object-oriented patterns in JavaScript.
+    </pre>
+    <script src="class.js"></script>
+</body>
+</html>
