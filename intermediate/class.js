@@ -37,10 +37,6 @@ console.log(h.name); // "Alice"
 h.age = 20
 console.log(h.theage); // "20"
 
-class animmal{
-    constructor(name, gender){
-        this.name = name
-        this.gender = gender
-    }
-    static 
-}
+console.log('instance method and property: is related to the instance of the class');
+console.log(h.specie); // undefined, because specie is a static property    
+console.log(h.species()); // "human species", because species is a static method
