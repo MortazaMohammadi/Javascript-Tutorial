@@ -36,3 +36,11 @@ console.log(h.theage); // "30"
 console.log(h.name); // "Alice"
 h.age = 20
 console.log(h.theage); // "20"
+
+class animmal{
+    constructor(name, gender){
+        this.name = name
+        this.gender = gender
+    }
+    static 
+}
